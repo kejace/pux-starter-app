@@ -11,4 +11,4 @@ data Event = PageView Route
 type AppEffects fx = (ajax :: AJAX | fx)
 
 foldp :: ∀ fx. Event -> State -> EffModel State Event (AppEffects fx)
-foldp (PageView route) (State st) = noEffects $ State st { route = route, loaded = true }
+foldp (PageView route) st = noEffects $ st { route = route, loaded = true }

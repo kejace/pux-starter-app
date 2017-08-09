@@ -7,7 +7,8 @@ const entries = [path.join(__dirname, 'support/entry.js')]
 
 const plugins = [
   new webpack.DefinePlugin({
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    'process.env.CONTRACT_ADDRESS': JSON.stringify(process.env.CONTRACT_ADDRESS)
   })
 ]
 
